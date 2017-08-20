@@ -1,6 +1,6 @@
 # React Vanilla Boilerplate
 
-![Vanilla Boilerplate](http://imgur.com/1gzCT3O)
+![Vanilla Boilerplate](http://i.imgur.com/1gzCT3O.jpg)
 
 
 Some really reasonable setup for React applications, no overhead and tons of libraries. 
