@@ -36,10 +36,19 @@ const config = {
       }
     ],
   },
-  plugins: [],
+  // Globals & Plugins
+  plugins: [
+    new webpack.DefinePlugin(Object.assign({
+      'process.env': { NODE_ENV: JSON.stringify(project.env) },
+      __DEV__,
+      __TEST__,
+      __PROD__,
+    }, project.globals))
+  ],
 }
 
 // DevServer
+// ------------------------------------
 config.devServer = {
   contentBase: [path.join(__dirname, 'src'), path.join(__dirname, 'public')],
   port: 3000,
@@ -48,6 +57,13 @@ config.devServer = {
   https: false,
   hot: true,
   noInfo: true, // only errors & warns on hot reload -- faster builds
+}
+
+// Enable HMR
+// ------------------------------------
+if (__DEV__) {
+  config.plugins.push(new webpack.HotModuleReplacementPlugin())
+  config.plugins.push(new webpack.NamedModulesPlugin())
 }
 
 // HTML Template
