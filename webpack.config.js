@@ -37,14 +37,17 @@ const config = {
     ],
   },
   plugins: [],
-  devServer: {
-    contentBase: [path.join(__dirname, 'src'), path.join(__dirname, 'public')],
-    port: 3000,
-    compress: false, // enable gzip compression
-    historyApiFallback: true, // true for index.html upon 404, object for multiple paths
-    https: false,
-    noInfo: true, // only errors & warns on hot reload -- faster builds
-  },
+}
+
+// DevServer
+config.devServer = {
+  contentBase: [path.join(__dirname, 'src'), path.join(__dirname, 'public')],
+  port: 3000,
+  compress: false, // enable gzip compression
+  historyApiFallback: true, // true for index.html upon 404, object for multiple paths
+  https: false,
+  hot: true,
+  noInfo: true, // only errors & warns on hot reload -- faster builds
 }
 
 // HTML Template

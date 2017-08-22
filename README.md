@@ -77,13 +77,11 @@ Distribution build can be made with:
 
 It cleans `dist` directory and creates fresh app version. You can also run `npm run staticServer` to preview your production build locally.
 
-### Build proccess streamline explained
+### Build process streamline explained
 
-0. Dist directory is cleaned (removed, `rimraf`)
-1. Webpack compiles javascript and exports `index.html`, and js bundles (vendor, normalize, manifest and the main bundle) and all images loaded with `url-loader`
-2. Gulp compiles sass in production mode (concat, autoprefixer, minify, revision hashing) to `./dist/css`
-3. Gulp injects compiled css file into `index.html` created by Webpack in the step 1
-4. Gulp copies files from `/public` to `/dist`
+1. Dist directory is cleaned (removed, `rimraf`)
+2. Webpack compiles javascript and exports `index.html`, and js bundles (vendor, normalize, manifest and the main bundle) and all images loaded with `url-loader`
+3. Gulp compiles sass in production mode (concat, autoprefixer, minify, revision hashing) to `./dist/css`, and injects the file into `index.html`
 
 ## What can be better (TBD)
 
