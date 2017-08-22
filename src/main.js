@@ -31,7 +31,6 @@ if (__DEV__) {
       }
     }
 
-    // Setup hot module replacement
     module.hot.accept([
       './routes/index',
     ], () =>
