@@ -41,3 +41,10 @@ gulp.task('inject:production', () => {
   .pipe(inject(gulp.src('./dist/css/*.css', {read: false}), {relative: true}))
   .pipe(gulp.dest('./dist'));
 });
+
+// Run this one if you want to copy files from ./public to ./dist (or vice-versa)
+gulp.task('copy-public', () => {
+  return gulp.src('public/*')
+  // Add image optimizations if you want
+  .pipe(gulp.dest('./dist'))
+})
