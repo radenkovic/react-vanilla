@@ -28,6 +28,7 @@ const createStore = (initialState = {}) => {
     });
     return store
   }
+  return store
 }
 
 export default createStore
