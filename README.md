@@ -26,7 +26,7 @@ Does *NOT* include:
 
 You need NodeJS, obviously : ).
 
-1. git clone `https://github.com/radenkovic/react-vanilla my-app`
+1. `git clone https://github.com/radenkovic/react-vanilla my-app`
 2. `cd my-app`
 3. `yarn`
 4. `npm start`
